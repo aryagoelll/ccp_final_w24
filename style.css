@@ -1,0 +1,198 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+/*pets.html grids*/
+
+.bacon-photos {
+    display:grid;   
+    /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+    grid-template-columns: auto;
+    gap: 10px;
+    background-color: #2b6d59;
+    padding: 10px;
+    /*width: 25%;*/
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  /*padding: 20px;*/
+  font-size: 30px;
+  text-align: center;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*travel.html grids*/
+.chiang_images {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 10px;
+  background-color: #2b6d59;
+  padding: 10px;
+}
+
+.chiang_images > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+}
+
+.image1 {
+  grid-row: 1 / 3;
+}
+
+.image1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image2_5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*recipes grid*/
+.chinese_soup {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 10px;
+  background-color: #2b6d59;
+  padding: 10px;
+}
+
+.chinese_soup > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+}
+
+.soup1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/*nav bar*/
+/*changing to horizontal, adding background color*/
+.nav_bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+.nav_bar_li {
+    float: left;
+  }
+
+  /*text styling*/
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /*hovering active*/
+  li a:hover:not(.active) {
+    background-color: #1d1d1d;
+  }
+  
+  /*color change when active*/
+  .active {
+    background-color: #2b6d59;
+    font-weight: bold;
+  }
+
+
+  .skip_main_content {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip_main_content:focus {
+    position: static;
+    left: auto;
+}
+
+.skip_main_content {
+    background-color: #00336a;
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.skip_main_content:hover,
+.skip_main_content:active {
+    background-color: #00336a;
+}
+
+
+
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .gif-animation {
+    display: none; /* or any other alternative styles for reduced motion */
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .bacon-photos {
+    grid-template-columns: auto auto; 
+  }
+
+  .chiang_images {
+    grid-template-columns: auto auto; 
+  }
+
+  .chinese_soup {
+    grid-template-columns: auto auto; 
+  }
+
+  body {
+    background-color: #ffe7ea; 
+}
+}
+
+
+@media only screen and (min-width: 1000px) {
+  .bacon-photos {
+    grid-template-columns: auto auto auto auto; 
+  }
+
+  .chiang_images {
+    grid-template-columns: auto auto auto; 
+  }
+
+  .chinese_soup {
+    grid-template-columns: auto auto auto; 
+  }
+
+  body {
+    background-color: #ffebcb;
+  }
+}
